@@ -443,7 +443,13 @@ body { font-family: var(--font-sans); background: var(--cream); color: var(--ink
 .footer { text-align: center; padding: 40px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--sand); }
 .footer a { color: var(--terracotta); text-decoration: none; }
 
-/* RESPONSIVE */
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-mentor { display: none; color: var(--terracotta); font-size: 13px; font-weight: 600; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .nav-mentor { display: inline-block; }
+}
+  /* RESPONSIVE */
 @media (max-width: 768px) {
   .nav { padding: 16px 20px; }
   .nav-links { gap: 16px; }
