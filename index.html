@@ -12,6 +12,23 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+  .nav-mentorship-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links a:not(.nav-cta) {
+    display: none;
+  }
+  .nav-mentorship-mobile {
+    display: inline-block;
+    color: var(--terracotta);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 12px;
+  }
+}
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap');
 
 :root {
@@ -206,6 +223,7 @@ body { font-family: var(--font-sans); background: var(--cream); color: var(--ink
     <a href="#book">Book</a>
     <a href="#ghazonomics">Ghazonomics</a>
     <a href="/mentorship">Mentorship</a>
+    <a href="/mentorship" class="nav-mentorship-mobile">Mentorship</a>
     <a href="#connect">Connect</a>
   </div>
   <a href="https://www.amazon.sg/Bytes-Beyond-Borders-Pakistani-Expatpreneur/dp/6279450023" target="_blank" class="nav-cta">Get the Book →</a>
