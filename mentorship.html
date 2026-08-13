@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book 1:1 Mentorship — Ghaz</title>
+<meta name="description" content="Book a paid 1:1 mentorship session with Ghazanfar Iqbal (Ghaz). Startups, cloud GTM, fundraising, career strategy.">
+<meta property="og:title" content="Book 1:1 with Ghaz">
+<meta property="og:description" content="60-min deep dive. Startups, cloud GTM, fundraising, or career. Pay-per-session.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap');
+
+:root {
+  --ink: #1a1a2e;
+  --ink-soft: #2d2d44;
+  --warm: #f8f4ef;
+  --cream: #fdfbf7;
+  --paper: #ffffff;
+  --sand: #e8e0d4;
+  --terracotta: #c75b39;
+  --terracotta-soft: rgba(199, 91, 57, 0.08);
+  --gold: #b8860b;
+  --teal: #2a7a6e;
+  --slate: #5a6178;
+  --muted: #8b8fa3;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: var(--cream); color: var(--ink); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+/* NAV */
+.nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 18px 48px; display: flex; justify-content: space-between; align-items: center; background: rgba(253,251,247,0.92); backdrop-filter: blur(16px); border-bottom: 1px solid var(--sand); }
+.nav-brand { font-family: var(--font-serif); font-size: 22px; font-weight: 700; color: var(--ink); text-decoration: none; }
+.nav-brand span { color: var(--terracotta); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a { color: var(--slate); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--terracotta); }
+
+/* HERO */
+.hero { padding: 140px 48px 60px; max-width: 800px; margin: 0 auto; text-align: center; }
+.hero-eyebrow { font-family: var(--font-mono); font-size: 11px; color: var(--terracotta); text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 16px; }
+.hero h1 { font-family: var(--font-serif); font-size: 48px; font-weight: 700; line-height: 1.15; margin-bottom: 16px; }
+.hero h1 em { font-style: italic; color: var(--terracotta); }
+.hero-body { font-size: 16px; color: var(--slate); max-width: 560px; margin: 0 auto 12px; line-height: 1.8; }
+.hero-price { font-family: var(--font-mono); font-size: 14px; color: var(--ink); margin-top: 20px; }
+.hero-price .amount { font-size: 28px; font-weight: 700; color: var(--terracotta); }
+
+/* TOPICS */
+.topics { padding: 40px 48px 60px; max-width: 800px; margin: 0 auto; }
+.topics h3 { font-family: var(--font-serif); font-size: 22px; margin-bottom: 20px; text-align: center; }
+.topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.topic-card { background: var(--paper); border: 1px solid var(--sand); border-radius: 10px; padding: 16px 20px; font-size: 14px; color: var(--slate); display: flex; align-items: center; gap: 10px; }
+.topic-card i { color: var(--terracotta); font-size: 16px; flex-shrink: 0; }
+
+/* SLOTS */
+.slots-section { padding: 60px 48px; max-width: 800px; margin: 0 auto; }
+.slots-section h3 { font-family: var(--font-serif); font-size: 22px; margin-bottom: 8px; }
+.slots-section .subtitle { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+#slots-container { display: grid; gap: 12px; }
+.slot-card { background: var(--paper); border: 1.5px solid var(--sand); border-radius: 10px; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; cursor: pointer; }
+.slot-card:hover { border-color: var(--terracotta); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(26,26,46,0.06); }
+.slot-card.selected { border-color: var(--terracotta); background: var(--terracotta-soft); }
+.slot-date { font-weight: 600; font-size: 15px; }
+.slot-time { font-family: var(--font-mono); font-size: 13px; color: var(--slate); margin-top: 4px; }
+.slot-duration { font-size: 12px; color: var(--muted); background: var(--warm); padding: 4px 10px; border-radius: 4px; }
+.slots-empty { text-align: center; padding: 40px; color: var(--muted); font-size: 14px; }
+.slots-loading { text-align: center; padding: 40px; color: var(--muted); font-size: 14px; }
+
+/* FORM */
+.booking-form { padding: 40px 48px 80px; max-width: 600px; margin: 0 auto; display: none; }
+.booking-form.visible { display: block; }
+.booking-form h3 { font-family: var(--font-serif); font-size: 22px; margin-bottom: 24px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1.5px solid var(--sand); border-radius: 8px; font-family: var(--font-sans); font-size: 14px; transition: border-color 0.2s; background: var(--paper); }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--terracotta); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-group .hint { font-size: 12px; color: var(--muted); margin-top: 4px; }
+.btn-book { width: 100%; background: var(--ink); color: var(--warm); padding: 16px; border: none; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.25s; margin-top: 24px; }
+.btn-book:hover { background: var(--terracotta); }
+.btn-book:disabled { background: var(--muted); cursor: not-allowed; }
+
+/* CONFIRMED */
+.confirmed-section { display: none; text-align: center; padding: 160px 48px 80px; max-width: 600px; margin: 0 auto; }
+.confirmed-section.visible { display: block; }
+.confirmed-section .check { font-size: 64px; color: var(--teal); margin-bottom: 24px; }
+.confirmed-section h2 { font-family: var(--font-serif); font-size: 32px; margin-bottom: 12px; }
+.confirmed-section p { font-size: 15px; color: var(--slate); line-height: 1.8; }
+
+/* FOOTER */
+.footer { text-align: center; padding: 40px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--sand); }
+.footer a { color: var(--terracotta); text-decoration: none; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav { padding: 16px 20px; }
+  .nav-links { gap: 16px; }
+  .hero { padding: 120px 20px 40px; }
+  .hero h1 { font-size: 32px; }
+  .topics, .slots-section, .booking-form { padding-left: 20px; padding-right: 20px; }
+  .slot-card { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .topic-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-brand">Ghaz<span>.</span></a>
+  <div class="nav-links">
+    <a href="/#about">About</a>
+    <a href="/#book">Book</a>
+    <a href="/mentorship" style="color: var(--terracotta); font-weight: 600;">Mentorship</a>
+  </div>
+</nav>
+
+<!-- CONFIRMED STATE -->
+<section class="confirmed-section" id="confirmed">
+  <div class="check"><i class="fas fa-check-circle"></i></div>
+  <h2>You're booked!</h2>
+  <p>Payment confirmed. You'll receive a calendar invite and meeting link at your email within 24 hours.<br><br>Looking forward to our session. Come prepared with your top question — we'll make every minute count.</p>
+  <p style="margin-top: 24px;"><a href="/" style="color: var(--terracotta); font-weight: 600;">← Back to ghaz.io</a></p>
+</section>
+
+<!-- MAIN CONTENT -->
+<div id="main-content">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Mentorship</div>
+    <h1>60 minutes. <em>Zero fluff.</em></h1>
+    <p class="hero-body">
+      Book a 1:1 with me to go deep on startups, cloud GTM, fundraising strategy, ecosystem building, or career pivots. 16+ years across 5 countries — distilled into one focused session for you.
+    </p>
+    <div class="hero-price">
+      <span class="amount">$150</span> / 60-min session
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="topics">
+    <h3>What we can cover</h3>
+    <div class="topic-grid">
+      <div class="topic-card"><i class="fas fa-rocket"></i> Startup strategy &amp; GTM</div>
+      <div class="topic-card"><i class="fas fa-cloud"></i> Cloud &amp; AWS growth</div>
+      <div class="topic-card"><i class="fas fa-hand-holding-dollar"></i> Fundraising &amp; pitch</div>
+      <div class="topic-card"><i class="fas fa-globe-asia"></i> SEA market entry</div>
+      <div class="topic-card"><i class="fas fa-people-group"></i> Ecosystem building</div>
+      <div class="topic-card"><i class="fas fa-compass"></i> Career transitions</div>
+    </div>
+  </section>
+
+  <!-- AVAILABLE SLOTS -->
+  <section class="slots-section">
+    <h3>Pick a time</h3>
+    <p class="subtitle">All times shown in your local timezone</p>
+    <div id="slots-container">
+      <div class="slots-loading">Loading available slots...</div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section class="booking-form" id="booking-form">
+    <h3>Your details</h3>
+    <div class="form-group">
+      <label>Full Name *</label>
+      <input type="text" id="mentee-name" placeholder="e.g. Sarah Chen" required="">
+    </div>
+    <div class="form-group">
+      <label>Email *</label>
+      <input type="email" id="mentee-email" placeholder="you@company.com" required="">
+    </div>
+    <div class="form-group">
+      <label>LinkedIn (optional)</label>
+      <input type="url" id="mentee-linkedin" placeholder="https://linkedin.com/in/...">
+    </div>
+    <div class="form-group">
+      <label>What do you want to discuss? *</label>
+      <input type="text" id="mentee-topic" placeholder="e.g. Fundraising strategy for my B2B SaaS" required="">
+    </div>
+    <div class="form-group">
+      <label>Any context to help me prepare? (optional)</label>
+      <textarea id="mentee-context" placeholder="Current stage, specific challenges, what you've tried..."></textarea>
+      <div class="hint">The more context you share, the more value I can deliver in 60 min.</div>
+    </div>
+    <button class="btn-book" id="btn-book" onclick="handleBooking()">
+      Proceed to Payment →
+    </button>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Ghazanfar Iqbal. <a href="/">ghaz.io</a></p>
+</footer>
+
+<!-- SUPABASE SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="/js/booking.js"></script>
+
+
+
+</body></html>
