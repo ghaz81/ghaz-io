@@ -12,23 +12,6 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-  .nav-mentorship-mobile {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .nav-links a:not(.nav-cta) {
-    display: none;
-  }
-  .nav-mentorship-mobile {
-    display: inline-block;
-    color: var(--terracotta);
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-right: 12px;
-  }
-}
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap');
 
 :root {
@@ -182,16 +165,13 @@ body { font-family: var(--font-sans); background: var(--cream); color: var(--ink
 .footer a:hover { color: var(--terracotta); }
 
 /* RESPONSIVE */
-@media (max-width: 900px)
-  .nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-right { display: flex; align-items: center; gap: 14px; }
 .nav-mentor { display: none; color: var(--terracotta); font-size: 13px; font-weight: 600; text-decoration: none; }
 
 @media (max-width: 900px) {
-  .nav-mentor { display: inline-block; }
-}
-  {
   .nav { padding: 14px 20px; }
   .nav-links { display: none; }
+  .nav-mentor { display: inline-block; }
   .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 40px; }
   .hero h1 { font-size: 40px; }
   .hero h1 .tagline { font-size: 24px; }
