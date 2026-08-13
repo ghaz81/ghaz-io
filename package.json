@@ -1,10 +1,11 @@
 {
   "name": "ghaz-io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Ghazanfar Iqbal — Personal Brand & Bytes Beyond Borders",
-  "scripts": {
-    "dev": "npx serve .",
-    "build": "echo 'Static site — no build needed'"
+  "description": "Ghaz.io — Personal brand + mentorship booking",
+  "dependencies": {
+    "stripe": "^14.0.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "micro": "^10.0.1"
   }
 }

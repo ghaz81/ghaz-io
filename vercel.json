@@ -1,4 +1,5 @@
 {
+  "framework": null,
   "cleanUrls": true,
   "headers": [
     {
@@ -20,5 +21,8 @@
     { "source": "/book", "destination": "https://www.amazon.sg/Bytes-Beyond-Borders-Pakistani-Expatpreneur/dp/6279450023", "permanent": false },
     { "source": "/kindle", "destination": "https://www.amazon.com/Bytes-Beyond-Borders-Pakistani-Expatpreneur-ebook/dp/B0D1KWWW6Z/", "permanent": false },
     { "source": "/linkedin", "destination": "https://www.linkedin.com/in/ghazanfar-iqbal/", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/mentorship", "destination": "/mentorship.html" }
   ]
 }
