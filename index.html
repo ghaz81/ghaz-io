@@ -182,7 +182,14 @@ body { font-family: var(--font-sans); background: var(--cream); color: var(--ink
 .footer a:hover { color: var(--terracotta); }
 
 /* RESPONSIVE */
+@media (max-width: 900px)
+  .nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-mentor { display: none; color: var(--terracotta); font-size: 13px; font-weight: 600; text-decoration: none; }
+
 @media (max-width: 900px) {
+  .nav-mentor { display: inline-block; }
+}
+  {
   .nav { padding: 14px 20px; }
   .nav-links { display: none; }
   .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 40px; }
@@ -222,11 +229,13 @@ body { font-family: var(--font-sans); background: var(--cream); color: var(--ink
     <a href="#journey">Journey</a>
     <a href="#book">Book</a>
     <a href="#ghazonomics">Ghazonomics</a>
-    <a href="/mentorship">Mentorship</a>
-    <a href="/mentorship" class="nav-mentorship-mobile">Mentorship</a>
     <a href="#connect">Connect</a>
+    <a href="/mentorship">Mentorship</a>
   </div>
-  <a href="https://www.amazon.sg/Bytes-Beyond-Borders-Pakistani-Expatpreneur/dp/6279450023" target="_blank" class="nav-cta">Get the Book →</a>
+  <div class="nav-right">
+    <a href="/mentorship" class="nav-mentor">Mentorship</a>
+    <a href="https://www.amazon.sg/Bytes-Beyond-Borders-Pakistani-Expatpreneur/dp/6279450023" target="_blank" class="nav-cta">Get the Book →</a>
+  </div>
 </nav>
 
 <!-- HERO -->
