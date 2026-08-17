@@ -2,6 +2,7 @@
   "name": "ghaz-io",
   "version": "2.0.0",
   "private": true,
+  "type": "module",
   "description": "Ghaz.io — Personal brand + mentorship booking",
   "dependencies": {
     "stripe": "^14.0.0",
