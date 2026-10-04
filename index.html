@@ -224,7 +224,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
 
 /* MENTORSHIP CALLOUT */
 .mentor-callout { margin-top: 72px; border-radius: 20px; padding: 44px 48px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; background: linear-gradient(120deg, rgba(10,112,182,0.45), rgba(8,74,129,0.25) 60%, rgba(31,157,85,0.2)); border: 1px solid var(--line-strong); position: relative; overflow: hidden; }
-.mentor-callout::before { content: ''; position: absolute; width: 300px; height: 300px; right: -80px; top: -120px; background: radial-gradient(circle, rgba(184,240,122,0.25), transparent 70%); }
+.mentor-callout::before { content: ''; position: absolute; width: 300px; height: 300px; right: -80px; top: -120px; background: radial-gradient(circle, rgba(184,240,122,0.25), transparent 70%); pointer-events: none; }
+.mentor-callout > * { position: relative; z-index: 1; }
 .mentor-callout h3 { font-family: var(--font-display); font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
 .mentor-callout p { color: var(--text-soft); font-size: 15px; max-width: 520px; }
 
@@ -270,7 +271,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
   .hero-visual { order: -1; padding-top: 10px; }
   .book-3d { transform: rotateY(-8deg); }
   .book-3d img { width: 210px; }
-  .book-badge { right: -48px; bottom: -18px; padding: 8px 12px; font-size: 11px; }
+  .book-badge { position: relative; right: auto; bottom: auto; transform: none; width: max-content; margin: 16px auto 0; padding: 8px 12px; font-size: 11px; }
+  .book-3d .spine { display: none; }
   .scroll-cue { display: none; }
   .beach-banner { height: 280px; }
   .beach-banner .overlay { padding: 24px 20px; }
