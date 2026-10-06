@@ -238,7 +238,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
 .quote-card blockquote { font-family: var(--font-quote); font-style: italic; font-size: 17.5px; line-height: 1.6; color: var(--text); flex: 1; position: relative; padding-top: 26px; }
 .quote-card blockquote::before { content: '\201C'; position: absolute; left: -2px; top: -14px; font-size: 54px; color: var(--node); line-height: 1; font-family: var(--font-quote); }
 .quote-card .who { display: flex; align-items: center; gap: 12px; padding-top: 18px; border-top: 1px solid var(--line); }
-.quote-card .who i { font-size: 18px; color: var(--sky); width: 22px; text-align: center; }
+.quote-card .who .avatar { position: relative; width: 46px; height: 46px; flex-shrink: 0; }
+.quote-card .who .avatar img, .quote-card .who .avatar .initials { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(143,211,244,0.35); }
+.quote-card .who .avatar .initials { display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 15px; color: var(--abyss); background: linear-gradient(135deg, var(--sky), var(--node)); letter-spacing: 0.5px; }
+.quote-card .who .avatar .badge { position: absolute; right: -4px; bottom: -4px; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font-size: 10px; background: var(--abyss); border: 1.5px solid var(--line-strong); }
+.quote-card .who .avatar .badge.li { color: #4aa8ff; }
+.quote-card .who .avatar .badge.amz { color: #ffb84d; }
 .quote-card .who strong { display: block; font-size: 14px; color: var(--text); }
 .quote-card .who span { font-size: 12.5px; color: var(--text-muted); line-height: 1.4; display: block; }
 .reader-band { margin-top: 56px; display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start; }
@@ -653,15 +658,15 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
   <div class="praise-grid">
     <figure class="quote-card reveal">
       <blockquote>Ghaz is the kind of ecosystem builder every region needs. The startup community across Southeast Asia is stronger thanks to his leadership and his generosity toward founders.</blockquote>
-      <figcaption class="who"><i class="fa-brands fa-linkedin"></i><div><strong>Javier Ruiz Jimenez</strong><span>Exited SaaS founder, investor &amp; board advisor</span></div></figcaption>
+      <figcaption class="who"><span class="avatar"><img src="img/testimonials/javier-ruiz-jimenez.jpg" alt="Javier Ruiz Jimenez" width="46" height="46" loading="lazy"><span class="badge li"><i class="fa-brands fa-linkedin-in"></i></span></span><div><strong>Javier Ruiz Jimenez</strong><span>Exited SaaS founder, investor &amp; board advisor</span></div></figcaption>
     </figure>
     <figure class="quote-card reveal" style="--d:.06s">
       <blockquote>One of the boldest and most creative professionals I've had the opportunity to collaborate with.</blockquote>
-      <figcaption class="who"><i class="fa-brands fa-linkedin"></i><div><strong>Zainab Jalali</strong><span>Worked with Ghaz at Careem</span></div></figcaption>
+      <figcaption class="who"><span class="avatar"><img src="img/testimonials/zainab-jalali.jpg" alt="Zainab Jalali" width="46" height="46" loading="lazy"><span class="badge li"><i class="fa-brands fa-linkedin-in"></i></span></span><div><strong>Zainab Jalali</strong><span>Worked with Ghaz at Careem</span></div></figcaption>
     </figure>
     <figure class="quote-card reveal" style="--d:.12s">
       <blockquote>Ghazanfar has a unique ability to communicate and connect with people.</blockquote>
-      <figcaption class="who"><i class="fa-brands fa-linkedin"></i><div><strong>Gayle Lee</strong><span>Mentor, Telenor Ignite</span></div></figcaption>
+      <figcaption class="who"><span class="avatar"><img src="img/testimonials/gayle-lee.jpg" alt="Gayle Lee" width="46" height="46" loading="lazy"><span class="badge li"><i class="fa-brands fa-linkedin-in"></i></span></span><div><strong>Gayle Lee</strong><span>Mentor, Telenor Ignite</span></div></figcaption>
     </figure>
   </div>
   <p class="praise-more reveal"><a href="https://www.linkedin.com/in/ghazanfar-iqbal/details/recommendations/" target="_blank" rel="noopener">All recommendations on LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
@@ -676,19 +681,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
     <div class="reader-quotes">
       <figure class="quote-card reveal">
         <blockquote>Chapter 5 should be required reading for any entrepreneur! Grabbed a few copies, for myself and those I think will benefit.</blockquote>
-        <figcaption class="who"><i class="fa-brands fa-amazon"></i><div><strong>HW</strong><span>Verified reader, United Kingdom</span></div></figcaption>
+        <figcaption class="who"><span class="avatar"><span class="initials" aria-hidden="true">HW</span><span class="badge amz"><i class="fa-brands fa-amazon"></i></span></span><div><strong>HW</strong><span>Verified reader, United Kingdom</span></div></figcaption>
       </figure>
       <figure class="quote-card reveal" style="--d:.06s">
         <blockquote>Despite coming from a completely different background, I can relate so much to the author's life story.</blockquote>
-        <figcaption class="who"><i class="fa-brands fa-amazon"></i><div><strong>Chris Chandler</strong><span>Verified reader, United States</span></div></figcaption>
+        <figcaption class="who"><span class="avatar"><span class="initials" aria-hidden="true">CC</span><span class="badge amz"><i class="fa-brands fa-amazon"></i></span></span><div><strong>Chris Chandler</strong><span>Verified reader, United States</span></div></figcaption>
       </figure>
       <figure class="quote-card reveal">
         <blockquote>Ghaz has written a very memorable and honest account of his life and the highs and lows he has had to face.</blockquote>
-        <figcaption class="who"><i class="fa-brands fa-amazon"></i><div><strong>Suchir</strong><span>Verified reader, India</span></div></figcaption>
+        <figcaption class="who"><span class="avatar"><span class="initials" aria-hidden="true">S</span><span class="badge amz"><i class="fa-brands fa-amazon"></i></span></span><div><strong>Suchir</strong><span>Verified reader, India</span></div></figcaption>
       </figure>
       <figure class="quote-card reveal" style="--d:.06s">
         <blockquote>A really interesting story that is a memoir but also has business and life principles.</blockquote>
-        <figcaption class="who"><i class="fa-brands fa-amazon"></i><div><strong>Rob</strong><span>Verified reader, United States</span></div></figcaption>
+        <figcaption class="who"><span class="avatar"><span class="initials" aria-hidden="true">R</span><span class="badge amz"><i class="fa-brands fa-amazon"></i></span></span><div><strong>Rob</strong><span>Verified reader, United States</span></div></figcaption>
       </figure>
     </div>
   </div>
