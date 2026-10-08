@@ -152,8 +152,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
 
 /* PHOTO GALLERY */
 .photo-strip { width: 100%; padding: 0 4px; }
-.photo-strip-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
-.photo-strip figure { position: relative; overflow: hidden; height: 280px; border-radius: 4px; }
+.photo-strip-inner { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.photo-strip figure { position: relative; overflow: hidden; height: 260px; border-radius: 4px; }
 .photo-strip figure img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(.2,.8,.2,1), filter 0.4s; filter: saturate(0.85) brightness(0.85); }
 .photo-strip figure::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,112,182,0.15), rgba(5,11,22,0.85)); opacity: 0.7; transition: opacity 0.4s; }
 .photo-strip figcaption { position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 2; font-size: 12.5px; font-weight: 500; color: #fff; line-height: 1.4; transform: translateY(8px); opacity: 0; transition: all 0.35s; }
@@ -339,6 +339,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
   .about-aside { grid-template-columns: 1fr; }
   .photo-strip-inner { grid-template-columns: 1fr 1fr; }
   .photo-strip figure { height: 190px; }
+  .photo-strip figure:last-child { grid-column: 1 / -1; height: 220px; }
   .photo-strip figcaption { opacity: 1; transform: none; font-size: 11px; left: 10px; right: 10px; bottom: 8px; }
   .timeline::before { left: 7px; transform: none; }
   .t-item, .t-item:nth-child(even) { width: 100%; margin-left: 0; padding: 0 0 24px 34px; }
@@ -364,7 +365,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
   .numbers-grid, .work-grid { grid-template-columns: 1fr; }
   .pillar-row { grid-template-columns: 1fr 1fr; }
   .photo-strip-inner { grid-template-columns: 1fr; }
-  .photo-strip figure { height: 220px; }
+  .photo-strip figure, .photo-strip figure:last-child { height: 220px; }
   .nav-cta .long { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -509,6 +510,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
     <figure class="reveal" style="--d:.08s"><img src="unicorn-day-panel.jpeg" alt="Vibe Coding Workshop — Antler Malaysia" loading="lazy"><figcaption>Vibe Coding Workshop — Antler Malaysia</figcaption></figure>
     <figure class="reveal" style="--d:.16s"><img src="antler-workshop.jpeg" alt="SheGrows Global — UN ESCAP panel at AWS KL" loading="lazy"><figcaption>SheGrows Global — UN ESCAP panel at AWS KL</figcaption></figure>
     <figure class="reveal" style="--d:.24s"><img src="austrade-panel.jpeg" alt="Endeavor Malaysia Awards 2024" loading="lazy"><figcaption>Endeavor Malaysia Awards 2024</figcaption></figure>
+    <figure class="reveal" style="--d:.32s"><img src="ai-malaysia-takeover.jpg" alt="AI Malaysia Takeover 2026 by 500 Global — panel: AI Startups Need Customers, Not Just Capital" loading="lazy"><figcaption>AI Malaysia Takeover 2026 — 500 Global</figcaption></figure>
   </div>
   <div class="photo-strip-caption">Founders · Workshops · Panels · Awards</div>
 </div>
@@ -647,6 +649,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--node); outline-
     <figure class="reveal" style="--d:.08s"><img src="endeavor-awards.jpeg" alt="AWS Unicorn Day 2025 — Panel Moderator" loading="lazy"><figcaption>AWS Unicorn Day 2025 — Panel Moderator</figcaption></figure>
     <figure class="reveal" style="--d:.16s"><img src="amazon-paloalto.jpeg" alt="Austrade Australia-SEA Business Exchange" loading="lazy"><figcaption>Austrade Australia-SEA Business Exchange</figcaption></figure>
     <figure class="reveal" style="--d:.24s"><img src="kurta-aws-pakistan.jpeg" alt="Founders Meetup Lahore — Keynote" loading="lazy"><figcaption>Founders Meetup Lahore — Keynote</figcaption></figure>
+    <figure class="reveal" style="--d:.32s"><img src="stripe-vercel-panel.jpg" alt="AI, Payments &amp; Frontend panel with executives from Stripe and Vercel" loading="lazy"><figcaption>AI, Payments &amp; Frontend — with Stripe &amp; Vercel</figcaption></figure>
   </div>
   <div class="photo-strip-caption">Building ecosystems across borders: Palo Alto · Kuala Lumpur · Lahore</div>
 </div>
