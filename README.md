@@ -125,7 +125,7 @@ git push -u origin main
 - Create a 1200x630px social share image
 - Add to `<head>`:
 ```html
-<meta property="og:image" content="https://ghazanfariqbal.com/og-image.jpg">
+<meta property="og:image" content="https://ghazanfariqbal.com/og-image-v2.jpg">
 ```
 
 ---
