@@ -109,9 +109,9 @@ git push -u origin main
 
 #### Google Search Console:
 1. Go to https://search.google.com/search-console
-2. Add property → URL prefix → `https://ghazanfariqbal.com`
+2. Add property → URL prefix → `https://ghaz.io`
 3. Verify via DNS (Cloudflare makes this easy)
-4. Submit your sitemap: `https://ghazanfariqbal.com/sitemap.xml`
+4. Submit your sitemap: `https://ghaz.io/sitemap.xml`
 
 #### Favicon:
 - Create a 32x32 and 180x180 icon (use your headshot or a "G" logo)
@@ -125,7 +125,7 @@ git push -u origin main
 - Create a 1200x630px social share image
 - Add to `<head>`:
 ```html
-<meta property="og:image" content="https://ghazanfariqbal.com/og-image-v2.jpg">
+<meta property="og:image" content="https://ghaz.io/og-image-v2.jpg">
 ```
 
 ---
@@ -161,9 +161,9 @@ ghaz-website-production/
 ## 🔗 Built-in Short URLs (via vercel.json)
 
 Once live, these redirect automatically:
-- `ghazanfariqbal.com/book` → Amazon SG paperback
-- `ghazanfariqbal.com/kindle` → Amazon Kindle edition
-- `ghazanfariqbal.com/linkedin` → LinkedIn profile
+- `ghaz.io/book` → Amazon SG paperback
+- `ghaz.io/kindle` → Amazon Kindle edition
+- `ghaz.io/linkedin` → LinkedIn profile
 
 ---
 
