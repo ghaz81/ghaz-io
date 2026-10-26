@@ -13,9 +13,9 @@
 
 | Domain | Purpose | Priority |
 |--------|---------|----------|
-| `ghazanfariqbal.com` | Primary canonical site | Must have |
-| `ghazonomics.com` | Redirect to main (or future content hub) | Recommended |
-| `ghaz.io` | Short memorable URL | Nice to have |
+| `ghaz.io` | Primary canonical site | Must have |
+| `ghazanfariqbal.com` | Redirect to `ghaz.io` | Recommended |
+| `ghazonomics.com` | Redirect to `ghaz.io` (or future content hub) | Recommended |
 
 **Steps:**
 1. Go to [Cloudflare Registrar](https://dash.cloudflare.com/sign-up) and create an account
@@ -95,15 +95,12 @@ git push -u origin main
 
 ### Step 5: Post-Launch Checklist
 
-#### Analytics (choose one):
-**Option A — Plausible Analytics** (privacy-friendly, $9/mo):
-- Sign up at https://plausible.io
-- Add this before `</head>`:
-```html
-<script defer data-domain="ghazanfariqbal.com" src="https://plausible.io/js/script.js"></script>
-```
+#### Analytics:
+**Vercel Web Analytics** (already in the site's `<head>`):
+- In the Vercel dashboard, open the project → **Analytics** → **Enable**
+- The script is `<script defer src="/_vercel/insights/script.js"></script>` before `</head>` on each page. No npm package is needed for these static pages.
 
-**Option B — Google Analytics 4** (free):
+**Alternative — Google Analytics 4** (free):
 - Go to https://analytics.google.com → Create property
 - Add the provided `<script>` tag before `</head>`
 
