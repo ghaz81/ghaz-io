@@ -1,6 +1,7 @@
 {
   "framework": null,
   "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
@@ -20,7 +21,8 @@
   "redirects": [
     { "source": "/book", "destination": "https://www.amazon.sg/Bytes-Beyond-Borders-Pakistani-Expatpreneur/dp/6279450023", "permanent": false },
     { "source": "/kindle", "destination": "https://www.amazon.com/Bytes-Beyond-Borders-Pakistani-Expatpreneur-ebook/dp/B0D1KWWW6Z/", "permanent": false },
-    { "source": "/linkedin", "destination": "https://www.linkedin.com/in/ghazanfar-iqbal/", "permanent": false }
+    { "source": "/linkedin", "destination": "https://www.linkedin.com/in/ghazanfar-iqbal/", "permanent": false },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.ghaz.io" }], "destination": "https://ghaz.io/:path*", "permanent": true }
   ],
   "rewrites": [
     { "source": "/mentorship", "destination": "/mentorship.html" }
